@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- GOOGLE ANALYTICS -->
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QHFYFFLPX"></script>
+		<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-9QHFYFFLPX');
+		</script>
+
+		<!-- FIN DE GOOGLE ANALYTICS-->
+
+		<link href="alquiler.ico" type="image/x-icon" rel="shortcut icon" />
+		<meta charset="utf-8">
+		<title>Registro de Inquilos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="preload">
+		<link rel="stylesheet"  href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="preload">
+		<link rel="stylesheet"  href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="datos.php" method="POST">
+					<h3>Registro De Inquilinos </h3>
+					<p> Aquí podrá registrar inquilinos morosos o puntuales con los pagos del alquiler de viviendas.</p>
+					<label class="form-group">
+						<input type="text" id="campo" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" class="form-control" name="name" required >
+						<span>Nombre completo de inquilino</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="tel" class="form-control" name="ced" required minlength="9" maxlength="18" required pattern="[0-9]+">
+						<span for="">Cédula</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" id="cam" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" class="form-control" name="tipo" required maxlength="7"  >
+						<span for="">Tipo de inquilino MOROSO O PUNTUAL</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" id="com" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" class="form-control" name="comen" required maxlength="100"  >
+						<span for="">Comentario sobre el inquilino</span>
+						<span class="border"></span>
+					</label>
+					<button  type="submit" name="registrar" value="registrar">Registrar 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<a href="consulta"><button type="button">Consultar <i class="zmdi zmdi-arrow-right"></i>
+                    </button></a>
+				</form>
+			</div>
+		</div>
+		
+		
+		
+
+
+	</body>
+</html>
+
